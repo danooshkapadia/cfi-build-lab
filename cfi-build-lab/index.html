@@ -37,8 +37,16 @@ a{color:inherit}
 .nav{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.96);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);font-size:12px;letter-spacing:.06em;text-transform:uppercase}
 .nav .wrap{display:flex;gap:2px;overflow-x:auto;padding:0 24px}
 .nav a{text-decoration:none;padding:12px 12px;white-space:nowrap;color:var(--mute);border-bottom:3px solid transparent}
-.nav a.on{color:var(--ink);border-color:var(--ink)}
+.nav a.on{color:var(--ink);border-color:var(--red)}
 .nav a.f{margin-left:auto;color:var(--khaki)}
+.nav a.stuck{color:var(--red)}
+.now{display:flex;gap:10px;align-items:baseline;font-family:Helvetica,Arial,sans-serif;font-size:14px;margin:0 0 22px;max-width:70ch}
+.now b{color:var(--red);letter-spacing:.12em;text-transform:uppercase;font-size:11px;white-space:nowrap}
+.red{color:var(--red)}
+.time{color:var(--red);font-family:Helvetica,Arial,sans-serif;font-weight:700;font-size:12px;letter-spacing:.1em}
+.bstep .kick .time{margin-left:8px}
+.step-n.do{color:var(--red)}
+.copy .head span b{color:var(--red)}
 /* sections */
 section.s{padding:56px 0;border-bottom:1px solid var(--line)}
 .num{font-family:Helvetica,Arial,sans-serif;font-weight:700;font-size:64px;line-height:.9;color:var(--khaki);margin-bottom:8px}
@@ -123,19 +131,19 @@ body.f .nav a.f{color:var(--red)}
     <div>
       <div class="kick">Hunting → Delivered → Decided</div>
       <h1>The outside comes to you.</h1>
-      <p style="font-size:21px;max-width:56ch">For five sessions you went to Claude and asked. Today you build the thing that reads the outside world for you, every week, without being asked. Then you practice the step none of us is good at yet: saying what you'd do about it.</p>
+      <p style="font-size:21px;max-width:56ch">For five sessions, you went to Claude and asked it for things. Today is different. Today you build something that reads the outside world for you, every week, without being asked, and hands you a short page of what moved. Then, in the last half hour, you practice the step all of us find hardest: reading it and saying what you'd do about it.</p>
       <div class="meta"><span><b>2:00 to 4:00 PM CT</b> · Zoom</span><span>Claude desktop app · Cowork</span><span>Works with this page open on any device</span></div>
     </div>
     <div class="drive">
       <b>You're driving today.</b>
-      <span>Everyone builds. Nothing here needs a blank page: every prompt is written out, every click is listed. If you fall behind the room, this page carries you. If you finish early, section 05 has more.</span>
-      <span style="margin-top:12px">Jump to <a href="#setup">03 Setup</a> and get your folder ready now.</span>
+      <span>Everyone builds today, and nobody starts from a blank page. Every prompt is written out for you. Every click is listed in order. If you fall behind the room, this page carries you at your own pace. If you finish early, the stretch box in section 04 has more.</span>
+      <span style="margin-top:12px">Here before we start? Jump to <a href="#setup">03 Setup</a> and get your folder ready. Everything else, we'll do together.</span>
     </div>
   </div>
 </div></header>
 
 <nav class="nav"><div class="wrap">
-  <a href="#start">00 Start</a><a href="#idea">01 The idea</a><a href="#map">02 The map</a><a href="#setup">03 Setup</a><a href="#build">04 The build</a><a href="#dash">05 Dashboard</a><a href="#landing">06 The landing</a><a href="#round">07 The round</a><a href="#close">08 Close</a><a href="#stuck">Stuck?</a><a href="#" class="f" id="ftoggle" title="Facilitator cues">F</a>
+  <a href="#start">00 Start</a><a href="#idea">01 The idea</a><a href="#map">02 The map</a><a href="#setup">03 Setup</a><a href="#build">04 The build</a><a href="#dash">05 Dashboard</a><a href="#landing">06 The landing</a><a href="#round">07 The round</a><a href="#close">08 Close</a><a href="#stuck" class="stuck">Stuck?</a><a href="#" class="f" id="ftoggle" title="Facilitator cues">F</a>
 </div></nav>
 
 <!-- 00 START -->
@@ -145,8 +153,10 @@ body.f .nav a.f{color:var(--red)}
       <div class="num">00</div>
       <div class="kick">Start here</div>
       <h2>What you'll have at four o'clock.</h2>
-      <p>One working agent that scans public sources every week and hands you a short brief: the four to six things that actually moved, why they matter to your business, and one recommendation on top. It's yours. It runs without you. And you'll have said, out loud, the first decision it should change.</p>
-      <p class="sub">You'll also watch a dashboard update itself because a file landed in a folder. You won't build that one today. The recipe is in section 05 for your desk.</p>
+      <div class="now"><b>This section</b><span>Two minutes of orientation. Nothing to do yet except read.</span></div>
+      <p>By the end of the afternoon you'll have one working agent in your own account. Every week it scans a handful of public sources and hands you a short brief: the four to six things that actually moved, why each one matters to your business, and one recommendation at the top. It's yours, it runs without you, and you'll have said out loud the first decision it should change.</p>
+      <p>Along the way you'll also watch a dashboard update itself because a file landed in a folder. That one you'll watch rather than build; the recipe is in section 05 for your desk, and it takes about half an hour once you've done today's build.</p>
+      <p class="sub">The afternoon has three moves, shown on the right. You're about to start the first one.</p>
     </div>
     <div>
       <div class="fig">
@@ -183,12 +193,13 @@ body.f .nav a.f{color:var(--red)}
   <div class="num">01</div>
   <div class="kick">The idea</div>
   <h2>You go get it. Then it comes to you. Then you decide.</h2>
+  <div class="now"><b>This section</b><span>The idea behind today's build, in three words. Read, don't type. About four minutes.</span></div>
   <div class="two">
     <div>
-      <p>Right now, the outside world reaches this team through one person's morning. Stefan reads mining and metals news for about an hour a day. A Bloomberg ticker runs on the conference-room TV. Once a quarter he hand-builds a market outlook for the board. Everyone else gets it secondhand, if at all.</p>
-      <p>That's hunting. It works, and it doesn't scale, and it makes a company myopic without anyone deciding to be.</p>
-      <p><b>Delivered</b> is the middle step. An agent reads the same sources every week and hands you the four to six things that moved. You didn't summon it. It showed up.</p>
-      <p><b>Decided</b> is the step that matters. A brief is not the finish line. Neither is a report. The finish line is you saying: based on this, here's the call. Push back or execute.</p>
+      <p>Think about how the outside world reaches you today. Probably something like this: you read the news for a while in the morning, or a ticker runs on a screen somewhere, or a newsletter lands and you skim it. Once in a while you or someone near you pulls all of it together by hand into an outlook for the board or the quarter. The rest of the time, what's happening outside the building reaches most of the team secondhand, if it reaches them at all.</p>
+      <p>That's <b>hunting</b>. It works, and it's how everyone does it, and it has two quiet costs. It doesn't scale past one person's morning. And it makes a company a little myopic without anyone ever deciding to be.</p>
+      <p><b>Delivered</b> is the middle step, and it's what you build today. An agent reads the same kinds of sources every week and hands you the four to six things that moved, with a line on why each one matters to you. You didn't go get it. It showed up.</p>
+      <p><b>Decided</b> is the step that matters most, and it's where we'll spend the last half hour. A brief is not the finish line. Neither is a report, however good. The finish line is you reading it and saying: based on this, here's the call. Push back on it, or execute it.</p>
     </div>
     <div>
       <div class="fig">
@@ -213,7 +224,7 @@ body.f .nav a.f{color:var(--red)}
             <path d="M540 152 L540 178" stroke="#c5aa88" stroke-width="2" marker-end="url(#a2)"/>
             <rect x="475" y="182" width="130" height="30" fill="#c5aa88"/><text x="540" y="202" text-anchor="middle" font-weight="700" font-size="12">"Here's the call."</text>
             <text x="540" y="228" text-anchor="middle" fill="#c5aa88" font-family="Georgia" font-size="12">push back or execute</text></g>
-          <g font-family="Georgia" font-size="13" fill="#6b6257"><text x="0" y="278">Today's build gets you from the first box to the second.</text><text x="0" y="298">The last twenty minutes are about the third, because that's where this team has been stopping short.</text></g>
+          <g font-family="Georgia" font-size="13" fill="#6b6257"><text x="0" y="278">Today's build gets you from the first box to the second.</text><text x="0" y="298">The last half hour is about the third, because that's the step most teams stop short of.</text></g>
         </g>
         <defs><marker id="a1" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 z" fill="#000"/></marker><marker id="a2" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 z" fill="#c5aa88"/></marker></defs>
       </svg>
@@ -227,18 +238,19 @@ body.f .nav a.f{color:var(--red)}
   </div>
   <div class="figcap"><b>Fig. 2</b> · Same work, fewer handoffs. Instead of directing each step, you review the work at the end.</div>
 
+  <p>If you're wondering how this is different from what you've been doing in Claude, Fig. 2 is the honest answer. In a chat, you drive every step: find it, ask, notice what's missing, ask again, move it where it belongs. With an agent, you write the assignment once, set the boundaries, and review what comes back. Same work. You just stop being the person who carries it between steps. Here's what that means for the one you build today.</p>
   <div class="three">
-    <div class="box"><h4>It reads for you</h4><p>Every Monday: tariffs and trade moves, copper and gold direction, what your accounts filed or announced. Four to six lines. Today's build.</p></div>
-    <div class="box"><h4>It never decides</h4><p>It reports trends and what they mean. The call is yours, and it's written in the brief as a recommendation you accept, change, or reject.</p></div>
-    <div class="box"><h4>It has lines it never crosses</h4><p>No invented sources. No filling gaps from memory. No paywalls. Nothing sent anywhere. You'll write one more line yourself.</p></div>
+    <div class="box"><h4>It reads for you</h4><p>Every Monday it checks tariffs and trade moves, copper and gold direction, and what your accounts filed or announced, then writes four to six lines. That's today's build.</p></div>
+    <div class="box"><h4>It never decides</h4><p>It reports trends and what they mean. The call is yours. The brief ends with a recommendation that you accept, change, or reject, and that's by design.</p></div>
+    <div class="box"><h4>It has lines it never crosses</h4><p>No invented sources. No filling gaps from memory. Nothing from behind a paywall. Nothing sent anywhere. You'll add one more line yourself in about twenty minutes.</p></div>
   </div>
 
   <div class="cue"><div class="kick">Cue · 2:06 to 2:14 · The demo, the map, the lanes</div>
     <ul>
       <li><span class="t">2:06 The one demo (4 min):</span> open your own Signal Brief from this morning. Read THE CALL aloud, then one signal with its "why it matters." Then: "This arrived at 6:40. I didn't ask for it. Nobody hunted." Do not scroll through the whole thing.</li>
-      <li><span class="t">2:10 Fig. 1, thirty seconds each box.</span> Point at Stefan's morning for the first box without making it a joke. "One person's hour a day is how the outside gets in. That's the myopia risk Stefan named in July, in his words."</li>
+      <li><span class="t">2:10 Fig. 1, thirty seconds each box.</span> For the first box, describe the morning-news habit generally; don't point at anyone. "One person's hour a day is usually how the outside gets in. That's the myopia risk this team named in July."</li>
       <li><span class="t">Fig. 2, one line:</span> "Chat, you direct every step. Agent, you brief it once and review at the end. Same work, fewer handoffs. Today you write the brief."</li>
-      <li><span class="t">Two lanes, named once:</span> "Everyone builds the same thing. If you finish early, section 05 and the stretch box in 04 are yours. If you're behind, polishing the brief you have counts as done. Zach and Dave are helping in chat. Try it, ask your neighbor, then flag them. James is the third call, not the first." Look at Stefan when you say the last sentence.</li>
+      <li><span class="t">Two lanes, named once:</span> "Everyone builds the same thing. If you finish early, section 05 and the stretch box in 04 are yours. If you're behind, polishing the brief you have counts as done. Zach and Dave are helping in chat. Try it, ask your neighbor, then flag them."</li>
       <li><span class="t">Set the 70/80 expectation before anyone types:</span> "First run gets it about 80% right. The fixing is the lesson."</li>
       <li><span class="t">Hard checkpoint: setup starts by 2:14.</span></li>
     </ul>
@@ -250,12 +262,14 @@ body.f .nav a.f{color:var(--red)}
   <div class="num">02</div>
   <div class="kick">The map</div>
   <h2>Three lanes in. One call out.</h2>
+  <div class="now"><b>This section</b><span>What the agent reads and what it hands back. Still reading, not typing. The build starts in the next section.</span></div>
   <div class="two">
     <div>
-      <p>Stefan named the three lanes in July. Every brief in this room reads the same three, and each of you points them at your own region and your own accounts. Same core, different slots.</p>
-      <p><b>Lane 1, geopolitics and trade.</b> Tariffs on steel, copper, refined metals. US and Canada. Europe and Asia. Ports, shipping, wars that move routes. Anything that changes where customers build or where we ship.</p>
-      <p><b>Lane 2, commodity trends.</b> Copper and gold are the big movers for our customers; steel and iron ore too. Direction, size, and driver. Never just the price.</p>
-      <p><b>Lane 3, your accounts.</b> Where they're investing or pulling back. New capacity, closures, quarterly results, leadership changes. Anything that changes what they'll buy from us.</p>
+      <p>Before you build anything, it helps to see the shape of what you're building. Every brief in this room reads the same three kinds of signal, because those three came out of this team's own conversation about what actually moves the business. What makes each one yours is where you point it: your region, your accounts, your decision. Same core, different slots.</p>
+      <p><b>Lane 1 is geopolitics and trade.</b> Tariffs on steel, copper, and refined metals. What the US and Canada are doing to each other. Europe and Asia. Ports, shipping, and the wars that move routes. In short, anything that changes where customers build or where we ship.</p>
+      <p><b>Lane 2 is commodity trends.</b> Copper and gold are the big movers for the customers we serve, with steel and iron ore behind them. What you want here is direction, size, and the reason behind the move. Never just the price on its own.</p>
+      <p><b>Lane 3 is your accounts.</b> Where they're investing and where they're pulling back. New capacity, closures, quarterly results, leadership changes. Anything that changes what they'll buy from us next.</p>
+      <p>Fig. 3 on the right shows how the three lanes come together. Everything the agent finds gets scored against the one decision you name, anything weak falls out, and what's left becomes one page with the recommendation at the top.</p>
     </div>
     <div>
       <div class="fig">
@@ -282,7 +296,7 @@ body.f .nav a.f{color:var(--red)}
   </div>
 
   <h3 style="margin-top:28px">The five answers become the file</h3>
-  <p>You've written an agent before. It's five answers, in the order Claude reads them. The only new part today is that the sources are outside the building.</p>
+  <p>Here's the reassuring part. You've written an agent before, in July. It was five answers in the order Claude reads them: the job, the sources, the deliverable, the lines it never crosses, and the when. Today's file has exactly the same five parts. The only thing that's new is that the sources live outside the building, on the open web, instead of in your inbox or a folder.</p>
   <div class="fig">
   <svg viewBox="0 0 900 190" role="img" aria-label="The agent card: job, sources, deliverable, lines, when">
     <g font-size="13">
@@ -303,8 +317,8 @@ body.f .nav a.f{color:var(--red)}
   <div class="figcap"><b>Fig. 4</b> · The agent card, same five parts as Session 5</div>
 
   <div class="two" style="margin-top:14px">
-    <div class="box k"><div class="kick">Trend, not price</div><p style="color:#fff">"Copper is $6.30" is trivia. "Copper is down 4.5% on the month, still up 36% on the year, and last week's drop was a delayed tariff decision" is a decision input. Ask for direction, size, and driver. The brief is written to do that.</p></div>
-    <div class="box"><div class="kick">The relevance gate</div><p>Every candidate gets a score from 1 to 5 against the decision you name. Below 3 falls out silently. An exec brief with four items reads as intelligence. Twenty reads as a feed you'll stop opening.</p></div>
+    <div class="box k"><div class="kick">Trend, not price</div><p style="color:#fff">"Copper is $6.30" is trivia; you'd forget it by lunch. "Copper is down 4.5% on the month, still up 36% on the year, and last week's drop was a delayed tariff decision" is something you can act on. The difference is direction, size, and driver. The brief you're about to build asks for all three, every time.</p></div>
+    <div class="box"><div class="kick">The relevance gate</div><p>Every candidate the agent finds gets a score from 1 to 5 against the one decision you name. Anything below 3 falls out without comment. This is the difference between a brief you'll keep opening and a feed you'll mute in a month. Four items reads as intelligence. Twenty reads as noise.</p></div>
   </div>
 </div></section>
 
@@ -313,7 +327,8 @@ body.f .nav a.f{color:var(--red)}
   <div class="num">03</div>
   <div class="kick">Setup · 7 minutes</div>
   <h2>On your computer, in one folder, before we build.</h2>
-  <p>Claude desktop app, not the web. Cowork, not chat. One folder where your agent lives and leaves its briefs. Tick each box as you go; the page remembers.</p>
+  <div class="now"><b>This section</b><span>Hands on keyboards now. Seven small steps to get your workspace ready. Tick each box as you go; the page remembers where you were.</span></div>
+  <p>It's been a few weeks since most of us opened Cowork, so we're going to set up together and slowly. There's nothing clever here, just three things to get right: the desktop app rather than the website, Cowork rather than chat, and one folder where your agent will live and leave its briefs. If any step doesn't match your screen, read the nearest label and keep going, or ask your neighbor. Nobody is behind.</p>
 
   <div class="two">
     <div>
@@ -326,7 +341,7 @@ body.f .nav a.f{color:var(--red)}
         <div class="step"><div class="step-n">6</div><div><h3>Web search: on</h3><p>In the message box, the <span class="path">+</span> button, then <span class="path">Web search</span>. Your agent reads public sites. Without this it reads nothing.</p><div class="check"><input type="checkbox" id="c6"><label for="c6">Web search on</label></div></div></div>
         <div class="step"><div class="step-n">7</div><div><h3>Check Microsoft 365 is connected</h3><p><span class="path">Settings</span> → <span class="path">Connectors</span>. Not needed for today's build, needed for the dashboard recipe later. If it shows disconnected, reconnect; it quietly drops sometimes.</p><div class="check"><input type="checkbox" id="c7"><label for="c7">Connected (or noted for later)</label></div></div></div>
       </div>
-      <p class="small" style="margin-top:14px"><b>Stuck for more than two minutes?</b> Ask your neighbor, then flag Zach or Dave in the Zoom chat. Watch this round if you need to. Tomorrow with this page open it takes ten minutes.</p>
+      <p class="small" style="margin-top:14px"><b class="red">Stuck for more than two minutes?</b> Ask your neighbor first, then flag Zach or Dave in the Zoom chat. If it's not coming together, that's fine: watch this round and build it tomorrow with this page open. It takes ten minutes once you've seen it done.</p>
     </div>
     <div>
       <div class="fig">
@@ -355,7 +370,7 @@ body.f .nav a.f{color:var(--red)}
     <ul>
       <li><span class="t">Say the window thing out loud, twice.</span> "If your left sidebar says Cowork and Scheduled, you're in the right room. If it doesn't, you're on the website. Close it, open the app."</li>
       <li><span class="t">Model first.</span> Stefan got stuck in Fable in S4 because Cowork remembers. "Pick Sonnet before you type. Fable is off for the org anyway."</li>
-      <li><span class="t">Helpers: Zach and Dave in chat. Bob for connectors.</span> "Try it, ask your neighbor, then flag. James is the third call, not the first." Stefan backs it if he's there; if not, you say it and move on.</li>
+      <li><span class="t">Helpers: Zach and Dave in chat. Bob for connectors.</span> "Try it, ask your neighbor, then flag."</li>
       <li><span class="t">Sweep:</span> thumbs up on camera when the folder shows a check. No chat. Anyone still stuck at 2:21: "Watch this round. It's ten minutes tomorrow with this page."</li>
       <li><span class="t">Web search toggle is the one to eyeball.</span> If it's missing from the + menu for anyone, Bob's org setting is off; you run the brief on your screen and they follow from step 4 (schedule) on. Say nothing about it to the room; just adjust.</li>
     </ul>
@@ -367,15 +382,17 @@ body.f .nav a.f{color:var(--red)}
   <div class="num">04</div>
   <div class="kick">The build · one thread, five steps</div>
   <h2>Your Signal Brief. Fill six blanks. Paste the rest.</h2>
-  <p>Stay in one Cowork conversation the whole way through. The file you paste in step 2 is the colleague you talk to in step 3 and the one you put on the clock in step 4.</p>
+  <div class="now"><b>This section</b><span>The build itself. Five steps in one Cowork thread, about forty minutes, and we go through them together. The times in red are where the room will be.</span></div>
+  <p>This is the part that sounds harder than it is. The whole agent is already written below. Your job is to make six small decisions about it, paste it, run it once, and put it on a schedule. Stay in one Cowork conversation the whole way through: the file you paste in step 2 is the colleague you talk to in step 3, and the one you put on the clock in step 4.</p>
 
   <div class="bstep">
-    <div class="kick">Step 1 · 2:21</div>
+    <div class="kick">Step 1 <span class="time">2:21</span></div>
     <h3>Fill your watchlist. Six yellow spots.</h3>
     <div class="two">
       <div>
-        <p>Below is the whole skill. Six spots are yours, all near the top: your name, your role, your business, your region, the one decision this serves, and one line it must never cross. The seven accounts are Stefan's starter list; leave them for today and swap in yours tonight.</p>
-        <p>Read the rest once before you paste, so it's yours. Every sentence in it is something you could have written after Session 5.</p>
+        <p>Scroll down to the block in step 2 and you'll see the whole skill, with six spots highlighted in yellow near the top. Those are yours: your name, your role, your business, your region, the one decision this brief should help with, and one line it must never cross without you. Everything else is written.</p>
+        <p>The seven accounts listed in Lane 3 are a starter set this team already knows. Leave them for today so we all build from the same page, and swap in your own accounts tonight; it's a two-minute edit.</p>
+        <p>Read the whole block once before you paste it. Every sentence in it is something you could have written yourself after Session 5, and reading it is how it becomes yours rather than something handed to you.</p>
         <div class="card">
           <label>The decision this brief serves (one sentence)</label>
           <input type="text" id="dec" placeholder="e.g. Where we point capacity, inventory, and sales attention over the next one to two quarters.">
@@ -386,20 +403,20 @@ body.f .nav a.f{color:var(--red)}
       </div>
       <div class="box">
         <div class="kick">If you're stuck on the decision</div>
-        <p>Finish this sentence: "If I knew the outside world had shifted, the first thing I'd change is ___."</p>
-        <p>Capacity. Inventory. Which accounts get the next sales call. Where the next hire goes. Pricing on the next quote. Pick the one that costs the most to get wrong.</p>
+        <p>Try finishing this sentence: "If I knew the outside world had shifted, the first thing I'd change is ___."</p>
+        <p>For most people in this room it's one of these: capacity, inventory, which accounts get the next sales call, where the next hire goes, or pricing on the next quote. Pick the one that costs the most to get wrong. You can change it later.</p>
         <div class="kick" style="margin-top:14px">If you're stuck on the line</div>
-        <p>What would embarrass you if the agent did it on its own? Write that.</p>
+        <p>Ask yourself what would embarrass you if the agent did it on its own. Then write that down as the thing it never does.</p>
       </div>
     </div>
   </div>
 
   <div class="bstep">
-    <div class="kick">Step 2 · 2:31 · paste by now, wherever you are</div>
+    <div class="kick">Step 2 <span class="time">2:31 · paste by now, wherever you are</span></div>
     <h3>Paste it. Claude writes the file.</h3>
-    <p>Copy the whole block, paste it into your Cowork thread, and send. Claude creates <span class="path">SKILL.md</span> in your Signal Desk folder and registers it. When it says it's saved, open <span class="path">Customize → Skills</span> and look for Signal Brief. That's your agent, and you wrote its job description.</p>
+    <p>Once your six spots are filled, use the copy button, paste the whole block into your Cowork thread, and send it. Claude will create a file called <span class="path">SKILL.md</span> in your Signal Desk folder and register it as a skill. When it says it's saved, open <span class="path">Customize → Skills</span> and look for Signal Brief. That's your agent, and you just wrote its job description.</p>
     <div class="copy">
-      <div class="head"><span>signal-brief · fill the yellow spots, then copy</span><button class="btn" data-copy="skill">Copy the whole thing</button></div>
+      <div class="head"><span><b>signal-brief</b> · fill the yellow spots, then copy</span><button class="btn" data-copy="skill">Copy the whole thing</button></div>
 <pre id="skill">Create a skill called "Signal Brief" in this folder. Save it as SKILL.md and register it so I can run it any time. Here are its instructions, use them exactly:
 
 ---
@@ -489,16 +506,17 @@ If nothing scores 3 or above, write exactly: "Quiet week. Nothing moved the deci
   </div>
 
   <div class="bstep">
-    <div class="kick">Step 3 · 2:37</div>
+    <div class="kick">Step 3 <span class="time">2:37</span></div>
     <h3>Run it once, while you're watching.</h3>
     <div class="two">
       <div>
-        <p>Say this in the same thread. It takes two to four minutes. It will ask to search the web and read a few sites; approve each one now, while you're here. Every question you answer today is one it won't have to ask on a Monday.</p>
-        <div class="copy short"><div class="head"><span>say this</span><button class="btn" data-copy="run">Copy</button></div><pre id="run">Run my Signal Brief.</pre></div>
-        <p>When it lands, read THE CALL first. Then find the one signal that's wrong, or the one it missed, or the format that isn't how your eyes read. Tell it, in one line. That correction is the work. The second brief is the one you keep.</p>
+        <p>Now that the skill exists, ask it to do its job. Say the line below in the same thread. It takes two to four minutes, and while it works it will ask permission to search the web and read a few sites. Approve each one now, while you're here. Every question you answer today is one it won't have to ask on a Monday morning when you're not around.</p>
+        <div class="copy short"><div class="head"><span><b>say this</b></span><button class="btn" data-copy="run">Copy</button></div><pre id="run">Run my Signal Brief.</pre></div>
+        <p>When the brief lands, read THE CALL first. Then look for the one thing that isn't right: a signal that's wrong, one it missed, or a format that isn't how your eyes like to read. Tell it, in one line. That correction is the real work of today, and the second brief, the one after your correction, is the one you keep.</p>
+        <p class="small">Expect the first run to be about eighty percent right. That's not a failure; it's the starting point. The fixing is the lesson.</p>
         <div class="box g" style="margin-top:14px"><div class="kick">Two fixes you'll probably want</div>
-          <p><b>The format isn't how you read.</b> Say: "Show it to me the way our Monday ELT report looks." Or paste a screenshot of a report you like and say "match this shape." It will.</p>
-          <p><b>It sounds like a robot.</b> Say: "Rewrite it the way I'd write it to Stefan." Then paste one paragraph you've actually written. It picks up the voice.</p>
+          <p><b>The format isn't how you read.</b> Say: "Show it to me the way our Monday ELT report looks." Or paste a screenshot of any report you like and say "match this shape." It will.</p>
+          <p><b>It sounds like a robot.</b> Say: "Rewrite it the way I'd write it to the leadership team." Then paste one paragraph you've actually written. It picks up your voice from a single sample.</p>
         </div>
       </div>
       <div>
@@ -525,28 +543,30 @@ If nothing scores 3 or above, write exactly: "Quiet week. Nothing moved the deci
   </div>
 
   <div class="bstep">
-    <div class="kick">Step 4 · 2:55</div>
+    <div class="kick">Step 4 <span class="time">2:55</span></div>
     <h3>Put it on the clock.</h3>
-    <p>Same thread. One sentence. Claude shows you the task name and the time; you confirm. Or type <span class="path">/schedule</span> and say it in plain English, same thing. Mondays early works for a weekly outside-in read. Not on the hour: 6:40 fires more reliably than 7:00 when everyone else's agent is also waking up.</p>
-    <div class="copy short"><div class="head"><span>say this</span><button class="btn" data-copy="sched">Copy</button></div><pre id="sched">Schedule my Signal Brief to run every Monday at 6:40 AM Central. Save each brief to the briefs folder and show me the newest one when I open Claude.</pre></div>
+    <p>This is the step that turns a skill into an agent, and it's one sentence. Say it in the same thread. Claude will show you the task name and the time, and you confirm. If you'd rather, type <span class="path">/schedule</span> and say it in plain English; it's the same thing. Early Monday is a good fit for a weekly outside-in read. One small tip: pick a time that isn't on the hour. A task set for 6:40 fires more reliably than one set for 7:00, when everyone else's agents are also waking up.</p>
+    <div class="copy short"><div class="head"><span><b>say this</b></span><button class="btn" data-copy="sched">Copy</button></div><pre id="sched">Schedule my Signal Brief to run every Monday at 6:40 AM Central. Save each brief to the briefs folder and show me the newest one when I open Claude.</pre></div>
     <div class="two" style="margin-top:14px">
-      <div class="box"><div class="kick">Honest frame</div><p>Your agent runs while your laptop is awake and Claude is open. Cloud runs, where it fires with the lid closed, depend on one setting Bob controls for the whole company. Build it now and it's ready the day that lands. Ask Claude to skip the folder if it says the schedule needs one.</p></div>
-      <div class="box g"><div class="kick">What meeting does this feed?</div><p>For the next thing you build, ask that before you pick a cadence. If there's no answer, the cadence is wrong. Todd throttled his own brief to Fridays in July. That was the right instinct.</p></div>
+      <div class="box"><div class="kick">The honest frame</div><p>Right now your agent runs while your laptop is awake and Claude is open. Cloud runs, where it fires with the lid closed, depend on one company-wide setting that IT controls. Build it today and it's ready the day that lands; nothing about your skill changes. If Claude says the schedule needs a folder, tell it to skip the folder. The skill lives in your account and doesn't need one to run.</p></div>
+      <div class="box g"><div class="kick">What meeting does this feed?</div><p>For the next thing you build, ask that question before you pick a cadence. If there's no meeting it feeds, the cadence is probably wrong. Weekly is right for almost everything; daily is right for very few things. Choosing less is often the more mature choice.</p></div>
     </div>
   </div>
 
   <div class="bstep">
-    <div class="kick">Step 5 · 3:01</div>
+    <div class="kick">Step 5 <span class="time">3:01</span></div>
     <h3>Confirm it's live. Then raise a hand.</h3>
+    <p>Last step, and it's just a look. You want to see your agent listed with a next-run time, so you know it's real and you know where to check on it later.</p>
     <div class="three">
-      <div class="box"><h4>Left sidebar → Scheduled</h4><p>Signal Brief is listed with a next run time. That's your run history from now on.</p></div>
-      <div class="box"><h4>Click Run now</h4><p>Optional, if the room has time. Watch it produce today's brief again, faster this time because it already knows the sources.</p></div>
-      <div class="box k"><h4 style="color:#c5aa88">Raise a hand on camera</h4><p style="color:#fff">Hand up means live. No chat needed. If you're not there yet, watch the rest; this page carries you tomorrow.</p></div>
+      <div class="box"><h4>Left sidebar → Scheduled</h4><p>Signal Brief is listed with a next run time. From now on, this is where you look when you wonder whether it ran.</p></div>
+      <div class="box"><h4>Click Run now</h4><p>Optional, if there's time. Watch it produce today's brief again. It's faster the second time because it already knows the sources.</p></div>
+      <div class="box k"><h4 style="color:#c5aa88">Raise a hand on camera</h4><p style="color:#fff">Hand up means live. No chat needed. If you're not there yet, that's fine; watch the rest, and this page carries you tomorrow.</p></div>
     </div>
     <div class="box" style="margin-top:20px"><div class="kick">Finished early? The stretch box.</div>
-      <p><b>Add a source.</b> "Also read https://www.kitco.com/price/precious-metals and note gold's day change." Kitco renders cleanly.</p>
-      <p><b>Add a lane.</b> Competitors. Same shape as Lane 3: five names, what you want to know.</p>
-      <p><b>Add memory.</b> "On every run, also read signals-log.md if it exists and report only what is new or has changed direction. Then append one line per signal to that file." Now the brief shows you the delta, not the feed.</p>
+      <p>If your hand is up and there's time, each of these is one sentence to your agent in the same thread.</p>
+      <p><b>Add a source.</b> "Also read https://www.kitco.com/price/precious-metals and note gold's day change." Kitco renders cleanly for the agent.</p>
+      <p><b>Add a lane.</b> Competitors, for instance. Same shape as Lane 3: five names and what you want to know about each.</p>
+      <p><b>Add memory.</b> "On every run, also read signals-log.md if it exists and report only what is new or has changed direction. Then append one line per signal to that file." Now the brief shows you the change since last week rather than the whole feed.</p>
       <p><b>Change who reads it.</b> "Write a second version, three lines long, for my direct reports, and save it as briefs/team-YYYY-MM-DD.md."</p>
     </div>
   </div>
@@ -573,11 +593,12 @@ If nothing scores 3 or above, write exactly: "Quiet week. Nothing moved the deci
   <div class="num">05</div>
   <div class="kick">The dashboard · watch this one</div>
   <h2>A file lands in a folder. The dashboard follows.</h2>
+  <div class="now"><b>This section</b><span>Hands off keyboards. Six minutes of watching, and one idea to take home. The recipe is here for your desk.</span></div>
   <div class="two">
     <div>
-      <p>The brief brings the outside in. This is the same idea pointed at the inside: a one-page dashboard that reads a file every time you open it. Drop a new version of the file in the folder, reopen the dashboard, and it's current. Nobody refreshed anything. Nobody asked anyone for a report.</p>
-      <p>You'll watch it on my screen. It's built from a sample orders file with CFI-shaped numbers, sitting in a SharePoint folder. Open it, note the top number, close it. I'll drop a newer file in. Open it again.</p>
-      <p>The dashboard can't reach the outside world by itself. Claude reads the file and hands the dashboard the numbers. That's why the file lives in SharePoint, where Claude's Microsoft 365 connector can see it, and why the recipe starts with the folder.</p>
+      <p>Your brief brings the outside world in. This is the same idea pointed at the inside of the company: a one-page dashboard that reads a file every time you open it. Drop a new version of the file in the folder, reopen the dashboard, and it's current. Nobody refreshed anything. Nobody asked anyone for a report.</p>
+      <p>You'll watch this one on the shared screen rather than build it, because the interesting part takes four seconds and the setup takes twenty minutes you'd rather spend at your desk. It's built from a sample orders file with CFI-shaped numbers, sitting in a SharePoint folder. We'll open it together and note the top number. Then a newer file goes into the folder. Then we open it again.</p>
+      <p>One thing worth understanding about why it works this way: the dashboard can't reach the outside world on its own. Claude reads the file and hands the dashboard the numbers. That's why the file lives in SharePoint, where Claude's Microsoft 365 connector can see it, and it's why the recipe starts with choosing a folder and never moving it.</p>
       <div class="btns"><a class="btn o" href="downloads/dashboard-recipe.md" download>The recipe, for your desk</a><a class="btn o" href="downloads/cfi-orders-weekly-v1.csv" download>Sample file v1</a><a class="btn o" href="downloads/cfi-orders-weekly-v2.csv" download>Sample file v2</a></div>
     </div>
     <div>
@@ -628,21 +649,22 @@ If nothing scores 3 or above, write exactly: "Quiet week. Nothing moved the deci
   <div class="num">06</div>
   <div class="kick">The landing</div>
   <h2>The finish line is not the report.</h2>
+  <div class="now"><b>This section</b><span>Ten quiet minutes. You'll write one decision in the card on the right. Two people will read theirs aloud. Nothing is sent.</span></div>
   <div class="two">
     <div>
-      <p>Stefan said this in July, and it's the reason this session ends the way it does:</p>
-      <div class="say"><p>"Everybody's getting pretty good at deep research and coming up with conclusions, and then, here, look at my output. You're giving away the responsibility. <b>Your finish line is not the report or the AI. The finish line is you consuming that information and deploying it.</b> You use this tool to go ninety miles an hour, and then you're going to walk again."</p></div>
-      <p>You can't send somebody an eighteen-page report. You've added work to their plate. You synthesize it down to: based on this, here's the decision I want to make. Push back on it, or execute it.</p>
-      <p>So. Open your brief. Find THE CALL. If it's not a decision you'd actually make, rewrite it until it is. Then write who you'd say it to.</p>
+      <p>Something was said in this team's own conversations back in July that's the reason today ends the way it does. It went roughly like this:</p>
+      <div class="say"><p>"Everybody's getting pretty good at deep research and coming up with conclusions, and then it's, here, look at my output. That's giving away the responsibility. <b>The finish line is not the report or the AI. The finish line is you consuming that information and deploying it.</b> You use this tool to go ninety miles an hour, and then you go back to walking."</p></div>
+      <p>It's true of all of us, and it's the most natural thing in the world. The tool makes producing so easy that producing starts to feel like finishing. But you can't hand somebody an eighteen-page report; you've just added work to their plate. The job is to bring it down to: based on this, here's the decision I want to make. Push back on it, or execute it.</p>
+      <p>So here's the exercise. Open your brief and find THE CALL. If it isn't a decision you'd actually make this week, rewrite it until it is. Then write who you'd say it to and when, and one thing that would prove you wrong. Start with a verb.</p>
     </div>
     <div class="card">
       <label>The call, in my words (start with a verb)</label>
       <textarea id="call" rows="3" placeholder="e.g. Hold the Arizona capacity plan; don't add the second shift until the copper tariff decision lands. Revisit Oct 6."></textarea>
       <label>Who I'd say it to, and when</label>
-      <input type="text" id="who" placeholder="e.g. Stefan, Monday staff, first five minutes">
+      <input type="text" id="who" placeholder="e.g. Monday staff meeting, first five minutes">
       <label>What would make me wrong</label>
       <input type="text" id="wrong" placeholder="e.g. Tariff decision lands early and copper spikes again">
-      <p class="small" style="margin-top:12px">This stays on your screen. Nothing is sent. Two people will read theirs aloud.</p>
+      <p class="small" style="margin-top:12px">This stays on your screen; the page remembers it and nothing is sent anywhere. Two people will read theirs aloud, and it's fine if it isn't you.</p>
     </div>
   </div>
   <div class="fig" style="margin-top:20px">
@@ -675,11 +697,12 @@ If nothing scores 3 or above, write exactly: "Quiet week. Nothing moved the deci
   <div class="num">07</div>
   <div class="kick">The round</div>
   <h2>What's next in your world that should work this way?</h2>
+  <div class="now"><b>This section</b><span>Everyone speaks once, forty-five seconds. The timer on the right keeps it fair. No preparation needed.</span></div>
   <div class="two">
     <div>
-      <p>Every voice, forty-five seconds. Not a performance. One thing in your function that should arrive instead of being hunted for, now that you've built one. Name it. Say what it reads and who it lands with. That's all.</p>
-      <p><b>No fixing, no follow-ups.</b> Reactions are welcome. Questions go to the Teams channel. When you finish, name who goes next.</p>
-      <div class="box g"><div class="kick">If you need a starter</div><p>"Every Friday, read ___ and tell me ___." Fill the blanks with the thing you currently open a spreadsheet to find out.</p></div>
+      <p>You've now built one thing that arrives instead of being hunted for. The question for this round is simple: what's the next one in your world? One thing in your function that you currently go and get, that should instead show up. Name it, say what it would read, and say who it would land with. That's all. Forty-five seconds, and it doesn't need to be polished.</p>
+      <p>Two ground rules so it stays easy. <b>No fixing and no follow-ups</b>; reactions are welcome, questions go to the Teams channel afterward. And when you finish, name who goes next.</p>
+      <div class="box g"><div class="kick">If you need a starter</div><p>"Every Friday, read ___ and tell me ___." Fill the blanks with the thing you currently open a spreadsheet, or send an email, to find out.</p></div>
     </div>
     <div>
       <div class="timer" id="timer"><div><div class="kick" style="color:#c5aa88">Forty-five seconds</div><div class="q">What's next in your world?</div></div><div class="big" id="tdisp">0:45</div></div>
@@ -703,19 +726,22 @@ If nothing scores 3 or above, write exactly: "Quiet week. Nothing moved the deci
   <div class="num">08</div>
   <div class="kick">Close</div>
   <h2>What exists now that didn't at two o'clock.</h2>
+  <div class="now"><b>This section</b><span>Where we landed, and three small things for the week. Then we're done.</span></div>
+  <p>Two hours ago the outside world reached this team through whoever happened to read the news that morning. Here's what's different now.</p>
   <div class="three">
-    <div class="box"><h4>Eleven Signal Briefs</h4><p>Scheduled, in eleven accounts, each pointed at its own region and accounts. First one lands Monday.</p></div>
-    <div class="box"><h4>Eleven decisions, said out loud</h4><p>Not summaries. Calls, with a name and a day attached.</p></div>
-    <div class="box"><h4>A list of what's next</h4><p>One per function, in your own words, captured. That's the next quarter's build list, and it came from you.</p></div>
+    <div class="box"><h4>Eleven Signal Briefs</h4><p>Scheduled, in eleven accounts, each pointed at its own region and its own accounts. The first one lands Monday.</p></div>
+    <div class="box"><h4>Eleven decisions, said out loud</h4><p>Not summaries. Calls, each with a name and a day attached to it.</p></div>
+    <div class="box"><h4>A list of what's next</h4><p>One per function, in your own words, captured. That's a build list for the next quarter, and it came from you.</p></div>
   </div>
 
   <h3 style="margin-top:32px">This week</h3>
+  <p>Three small things, about an hour in total, and none of them need to be perfect.</p>
   <div class="two">
     <div>
-      <p><b>Let Monday's brief land.</b> Read THE CALL. Reply to it, to yourself, in one line: here's what I'd do. Five minutes, on your phone.</p>
-      <p><b>Make the watchlist yours.</b> Open Customize → Skills → Signal Brief → Edit. Swap Stefan's seven accounts for your real ones. Add your region's specifics. Delete what doesn't matter. Twenty minutes at your desk.</p>
+      <p><b>Let Monday's brief land.</b> Read THE CALL. Reply to it, to yourself, in one line: here's what I'd do. Five minutes, on your phone, and you've practiced the finish line once.</p>
+      <p><b>Make the watchlist yours.</b> Open Customize → Skills → Signal Brief → Edit. Swap the starter accounts for your real ones, add what's specific to your region, and delete what doesn't matter to you. Twenty minutes at your desk.</p>
       <p><b>In the car:</b> voice-record what your function's next agent should do, the thing you named in the round. Post it to the Teams channel. Ten minutes. Rough beats perfect.</p>
-      <p><b>Stretch, thirty minutes:</b> the dashboard recipe in section 05, with a real export.</p>
+      <p><b>If you want more, thirty minutes:</b> the dashboard recipe in section 05, with a real export from a system you already use.</p>
     </div>
     <div class="box k">
       <p style="color:#fff;font-size:20px;line-height:1.4">All of it runs without you now.<br>None of it decides anything.<br>That part is still yours.<br>And that's the point.</p>
@@ -737,7 +763,8 @@ If nothing scores 3 or above, write exactly: "Quiet week. Nothing moved the deci
 <!-- STUCK -->
 <section class="s" id="stuck"><div class="wrap">
   <div class="kick">Where people get stuck</div>
-  <h2>Read the row. Do the move. Keep going.</h2>
+  <h2>Most of these have a one-line fix.</h2>
+  <p>Everything on this list happened to someone in this team in July, or to us while building the Weekly Report. None of it means you did something wrong. Find the row, do the move, and if it doesn't clear in two minutes, ask your neighbor.</p>
   <table>
     <tr><th>Stuck on</th><th>The move</th></tr>
     <tr><td>I'm on the website, not the app</td><td>Close the browser tab. Open the Claude desktop app from your Start menu. The sidebar should say Cowork and Scheduled.</td></tr>
@@ -749,12 +776,11 @@ If nothing scores 3 or above, write exactly: "Quiet week. Nothing moved the deci
     <tr><td>Two versions of a skill with the same name</td><td>Customize → Skills. The one under Personal wins over the one under Organization. Remove the one you don't want with the three-dot menu.</td></tr>
     <tr><td>The schedule says it needs a folder, or won't run in the cloud</td><td>Say: "Schedule it without a folder. Put the watchlist in the task itself." The skill is already in your account; it doesn't need the folder to run.</td></tr>
     <tr><td>It ran late, or didn't seem to run</td><td>Scheduled → run history. Twenty minutes late under Monday load is normal. Nothing produced means "Quiet week" or it failed; the run history tells you which.</td></tr>
-    <tr><td>The brief reads like a robot wrote it</td><td>"Rewrite it the way I'd write it to Stefan." Paste one paragraph of yours. It picks up the voice.</td></tr>
+    <tr><td>The brief reads like a robot wrote it</td><td>"Rewrite it the way I'd write it to the leadership team." Paste one paragraph of yours. It picks up the voice.</td></tr>
     <tr><td>The format isn't how my eyes read</td><td>Paste a screenshot of a report you like. "Match this shape." Ten seconds.</td></tr>
     <tr><td>It got a fact wrong</td><td>Check the source it named. If it named none, it broke a line; tell it so. If the source is wrong, drop the source. The brief learns from corrections, so correct it, don't ignore it.</td></tr>
     <tr><td>Microsoft 365 shows disconnected</td><td>Settings → Connectors → Microsoft 365 → reconnect. It drops quietly sometimes. Not needed for today's build; needed for the dashboard.</td></tr>
     <tr><td>Wants to build something else instead</td><td>Get this one live first. The second one takes ten minutes once you've done one. Bring the idea to the round.</td></tr>
-    <tr><td>"Should I ask James?"</td><td>After you've tried it and asked your neighbor. Not before. That's the deal.</td></tr>
   </table>
 </div></section>
 
