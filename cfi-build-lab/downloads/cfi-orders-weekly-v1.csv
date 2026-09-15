@@ -1,0 +1,53 @@
+week_ending,business_unit,region,product_family,bookings_usd,backlog_usd,on_time_pct,open_quotes
+2026-08-14,Con Forms,North America,Concrete forms,345000,813610,91.9,9
+2026-08-14,Con Forms,North America,Formwork rental,217000,489773,88.9,9
+2026-08-14,Con Forms,North America,Accessories,439000,777802,88.9,32
+2026-08-14,Con Forms,Europe,Concrete forms,215000,385394,93.5,9
+2026-08-14,Con Forms,Europe,Formwork rental,603000,1237574,97.5,9
+2026-08-14,Con Forms,Europe,Accessories,475000,982505,88.5,20
+2026-08-14,Tricon,North America,Wear plate,233449,477482,89.3,32
+2026-08-14,Tricon,North America,Fabrication,290950,591370,93.7,17
+2026-08-14,Tricon,North America,Pipe,266800,551016,94.4,29
+2026-08-14,Tricon,India,Wear plate,229000,466746,88.6,9
+2026-08-14,Tricon,India,Fabrication,496000,875324,94.8,33
+2026-08-14,Tricon,India,Pipe,577000,1068210,93.9,35
+2026-08-14,CFI Corporate,North America,Services,365000,671531,95.9,21
+2026-08-21,Con Forms,North America,Concrete forms,227630,468812,93.3,27
+2026-08-21,Con Forms,North America,Formwork rental,569590,1115865,94.1,10
+2026-08-21,Con Forms,North America,Accessories,247200,496759,89.6,27
+2026-08-21,Con Forms,Europe,Concrete forms,264710,621172,92.2,10
+2026-08-21,Con Forms,Europe,Formwork rental,588130,1203584,95.9,26
+2026-08-21,Con Forms,Europe,Accessories,364620,786206,93.9,35
+2026-08-21,Tricon,North America,Wear plate,265740,603754,97.4,36
+2026-08-21,Tricon,North America,Fabrication,662496,1411992,88.6,25
+2026-08-21,Tricon,North America,Pipe,631596,1302576,94.8,34
+2026-08-21,Tricon,India,Wear plate,334750,727512,96.9,28
+2026-08-21,Tricon,India,Fabrication,196730,462811,91.6,13
+2026-08-21,Tricon,India,Pipe,444960,732921,95.7,14
+2026-08-21,CFI Corporate,North America,Services,574740,1033435,91.9,37
+2026-08-28,Con Forms,North America,Concrete forms,234260,405994,92.0,23
+2026-08-28,Con Forms,North America,Formwork rental,265000,597687,96.6,23
+2026-08-28,Con Forms,North America,Accessories,573460,1108060,91.6,30
+2026-08-28,Con Forms,Europe,Concrete forms,315880,543546,89.8,20
+2026-08-28,Con Forms,Europe,Formwork rental,548020,979130,92.8,17
+2026-08-28,Con Forms,Europe,Accessories,332840,607614,89.5,40
+2026-08-28,Tricon,North America,Wear plate,488925,1020802,91.2,14
+2026-08-28,Tricon,North America,Fabrication,706225,1615391,97.5,9
+2026-08-28,Tricon,North America,Pipe,547225,1269357,95.8,31
+2026-08-28,Tricon,India,Wear plate,405980,779149,89.0,31
+2026-08-28,Tricon,India,Fabrication,223660,391961,97.8,34
+2026-08-28,Tricon,India,Pipe,278780,470564,94.0,12
+2026-08-28,CFI Corporate,North America,Services,190800,391793,93.4,29
+2026-09-04,Con Forms,North America,Concrete forms,538460,872520,96.7,30
+2026-09-04,Con Forms,North America,Formwork rental,279040,588084,97.6,29
+2026-09-04,Con Forms,North America,Accessories,459980,781171,96.5,35
+2026-09-04,Con Forms,Europe,Concrete forms,463250,920509,88.9,12
+2026-09-04,Con Forms,Europe,Formwork rental,613670,1150084,90.6,16
+2026-09-04,Con Forms,Europe,Accessories,483960,783277,97.5,39
+2026-09-04,Tricon,North America,Wear plate,517205,888186,93.4,7
+2026-09-04,Tricon,North America,Fabrication,804855,1627811,97.8,11
+2026-09-04,Tricon,North America,Pipe,759511,1728921,93.2,16
+2026-09-04,Tricon,India,Wear plate,394580,875001,93.3,38
+2026-09-04,Tricon,India,Fabrication,379320,800044,94.1,18
+2026-09-04,Tricon,India,Pipe,645280,1156025,92.0,20
+2026-09-04,CFI Corporate,North America,Services,307380,619097,91.6,7

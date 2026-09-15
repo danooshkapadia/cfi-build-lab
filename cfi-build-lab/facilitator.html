@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Facilitator guide · CFI Build Lab</title>
+<meta name="robots" content="noindex">
+<style>
+:root{--paper:#fff;--panel:#ece3d7;--grey:#eaeaea;--ink:#000;--khaki:#c5aa88;--red:#cc0000;--mute:#6b6257;--line:#d9d0c2}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:Georgia,"Century Schoolbook","Century",serif;font-size:17px;line-height:1.5;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4,.kick,.tag,th,.nav,.btn{font-family:Helvetica,"Helvetica Neue",Arial,sans-serif}
+.kick{font-weight:700;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--khaki)}
+h1{font-weight:700;font-size:clamp(34px,5vw,60px);line-height:1;letter-spacing:-.02em;margin:.2em 0 .3em;text-wrap:balance}
+h2{font-weight:700;font-size:clamp(24px,3vw,36px);line-height:1.08;letter-spacing:-.015em;margin:.15em 0 .5em;text-wrap:balance}
+h3{font-weight:700;font-size:19px;margin:0 0 .35em}
+h4{font-weight:700;font-size:13px;letter-spacing:.06em;text-transform:uppercase;margin:0 0 .35em}
+p{margin:0 0 .75em;max-width:66ch}
+.sub{color:var(--mute)}.small{font-size:14px;color:var(--mute)}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+.bar{display:flex;justify-content:space-between;padding:14px 24px;border-bottom:1px solid var(--line);font-family:Helvetica,Arial,sans-serif;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--mute)}
+.bar b{color:var(--ink)}
+.hero{padding:44px 0 34px;border-bottom:1px solid var(--line)}
+.nav{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.96);border-bottom:1px solid var(--line);font-size:12px;letter-spacing:.06em;text-transform:uppercase}
+.nav .wrap{display:flex;gap:2px;overflow-x:auto}
+.nav a{text-decoration:none;padding:12px 11px;white-space:nowrap;color:var(--mute);border-bottom:3px solid transparent}
+.nav a.on{color:var(--ink);border-color:var(--ink)}
+section.s{padding:44px 0;border-bottom:1px solid var(--line)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:start}
+.three{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.box{background:var(--panel);padding:18px 20px}.box.g{background:var(--grey)}.box.k{background:var(--ink);color:#fff}.box.k .kick{color:var(--khaki)}.box.r{border-left:6px solid var(--red)}
+.box p{font-size:15px;margin-bottom:.5em}.box p:last-child{margin-bottom:0}
+.say{border-left:4px solid var(--khaki);padding:4px 0 4px 16px;margin:14px 0}
+.tag{display:inline-block;font-weight:700;font-size:11px;letter-spacing:.12em;text-transform:uppercase;background:var(--panel);padding:3px 8px;margin:0 6px 6px 0}
+.tag.r{background:var(--red);color:#fff}.tag.k{background:var(--ink);color:#fff}.tag.g{background:#dfe8d2}.tag.y{background:#f3e7b3}.tag.o{background:#f2d6b8}
+table{border-collapse:collapse;width:100%;font-size:15px}
+th{font-weight:700;text-align:left;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--khaki);padding:0 10px 8px 0;border-bottom:2px solid var(--ink)}
+td{vertical-align:top;padding:9px 10px 9px 0;border-bottom:1px solid var(--line);line-height:1.4}
+td:first-child{font-family:Helvetica,Arial,sans-serif;font-weight:700;white-space:nowrap}
+tr.p td{background:#fff7d6}tr.c td{background:#f6f6f6;color:var(--mute)}
+svg{width:100%;height:auto;display:block;overflow:visible}svg text{font-family:Helvetica,Arial,sans-serif}
+.fig{margin:16px 0 6px}.figcap{font-family:Helvetica,Arial,sans-serif;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--mute);margin:6px 0 18px}.figcap b{color:var(--ink)}
+.check{display:flex;gap:10px;align-items:flex-start;margin:6px 0}.check input{width:18px;height:18px;margin-top:4px;accent-color:#000}.check label{font-size:16px}
+.copy{background:#fbfaf7;border:1px solid var(--line);margin:10px 0}.copy .head{padding:6px 12px;border-bottom:1px solid var(--line);font-family:Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--mute);background:#f3efe8}.copy pre{margin:0;padding:12px 14px;font:13.5px/1.5 ui-monospace,Menlo,Consolas,monospace;white-space:pre-wrap}
+.btn{font-weight:700;font-size:12px;letter-spacing:.08em;text-transform:uppercase;background:var(--ink);color:#fff;border:0;padding:8px 12px;cursor:pointer;text-decoration:none;display:inline-block}
+.foot{padding:34px 24px;font-family:Helvetica,Arial,sans-serif;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--mute);display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px}
+@media (max-width:820px){.two,.three{grid-template-columns:1fr}td:first-child{white-space:normal}}
+</style>
+</head>
+<body>
+<div class="bar"><span><b>DK</b> · Facilitator guide · second screen</span><span>Internal. Not for the cohort.</span></div>
+
+<header class="hero"><div class="wrap">
+  <div class="kick">CFI Executive Team · Build Lab · Wed Sep 16 · 2:00 to 4:00 PM CT · Zoom</div>
+  <h1>Read this first. Then open the field guide and press F.</h1>
+  <p style="font-size:19px;max-width:60ch">You haven't touched this since July 29. This page puts the whole picture back in your head in about eight minutes, then hands you the minute-by-minute. The <a href="index.html">field guide</a> is what the room sees; press <b>F</b> on it and your cues appear inline, section by section.</p>
+</div></header>
+
+<nav class="nav"><div class="wrap">
+  <a href="#orient">Orient</a><a href="#story">The story so far</a><a href="#ask">What Stefan asked</a><a href="#room">The room</a><a href="#tonight">Tonight</a><a href="#ros">Run of show</a><a href="#moments">Moments</a><a href="#seeds">Seeds</a><a href="#tech">Tech state</a><a href="#risks">Risks</a><a href="#after">After</a><a href="#lang">Language</a>
+</div></nav>
+
+<!-- ORIENT -->
+<section class="s" id="orient"><div class="wrap">
+  <div class="kick">Orient · two minutes</div>
+  <h2>What tomorrow is, in five sentences.</h2>
+  <div class="two">
+    <div>
+      <p><b>1.</b> It's the last deliverable of a $20K executive sprint that already worked: five sessions in July, adoption 3.0 to 5.0, about 40 hours a week returned, 9.6 out of 10 recommend. The final report went to Stefan and to HIG on Aug 17.</p>
+      <p><b>2.</b> Stefan chose the subject himself on Jul 21: external market signals. Tariffs and geopolitics, copper and gold trends, news on 40 to 50 strategic accounts. His words: <i>"we get very myopic here."</i> He never said "dashboard." That was your word.</p>
+      <p><b>3.</b> Eleven execs each build a <b>Signal Brief</b>: a skill that reads four public sources weekly, scores what matters, and hands them one page with a recommendation on top. Then they schedule it. Paint by numbers; six blanks to fill, one paste, one run, one sentence to schedule.</p>
+      <p><b>4.</b> You demo a dashboard that updates itself when a file lands in SharePoint. They watch, they don't build. The recipe goes home with them.</p>
+      <p><b>5.</b> It ends on Stefan's own close from July: the finish line is the decision, not the report. Each person rewrites their brief's recommendation as a call they'd actually make, then names what's next in their function. That last round is your demand list for everything after this.</p>
+    </div>
+    <div>
+      <div class="box k"><div class="kick">The one behavior change</div><p style="color:#fff;font-size:17px">From going out to get information, to having it arrive already synthesized, and then ending on a decision instead of a document.</p></div>
+      <div class="box" style="margin-top:14px"><div class="kick">The thread</div><p style="font-size:20px;font-family:Helvetica,Arial,sans-serif;font-weight:700">Hunting → Delivered → Decided</p><p>Say it at the open, point at it in Fig. 1, call it back at the close.</p></div>
+      <div class="box g" style="margin-top:14px"><div class="kick">Two things to hold all afternoon</div><p><b>Teach and build never overlap.</b> "Hands off keyboards" before every teach beat. Vance lost two minutes of S4 typing while you talked.</p><p><b>Nothing in this room has ever failed at the concept level. Everything fails at the click level.</b> That's why every click is written down.</p></div>
+    </div>
+  </div>
+</div></section>
+
+<!-- STORY -->
+<section class="s" id="story"><div class="wrap">
+  <div class="kick">The story so far</div>
+  <h2>June to now, on one line.</h2>
+  <div class="fig">
+  <svg viewBox="0 0 960 250" role="img" aria-label="Timeline from June discovery to the September 16 Build Lab">
+    <line x1="20" y1="120" x2="940" y2="120" stroke="#000" stroke-width="2"/>
+    <g font-size="12">
+      <g><circle cx="60" cy="120" r="9" fill="#000"/><text x="60" y="80" text-anchor="middle" font-weight="700">Jun 26</text><text x="60" y="97" text-anchor="middle">Discovery</text><text x="60" y="150" text-anchor="middle" fill="#6b6257" font-family="Georgia">baseline 3.0</text><text x="60" y="166" text-anchor="middle" fill="#6b6257" font-family="Georgia">"the automation cliff"</text></g>
+      <g><circle cx="200" cy="120" r="9" fill="#000"/><text x="200" y="80" text-anchor="middle" font-weight="700">Jul 1 – 15</text><text x="200" y="97" text-anchor="middle">Sessions 1–3</text><text x="200" y="150" text-anchor="middle" fill="#6b6257" font-family="Georgia">orientation, outputs,</text><text x="200" y="166" text-anchor="middle" fill="#6b6257" font-family="Georgia">thinking partner</text></g>
+      <g><circle cx="340" cy="120" r="9" fill="#fff" stroke="#cc0000" stroke-width="3"/><text x="340" y="80" text-anchor="middle" font-weight="700" fill="#cc0000">Jul 21</text><text x="340" y="97" text-anchor="middle" fill="#cc0000">Midpoint w/ Stefan</text><text x="340" y="150" text-anchor="middle" fill="#6b6257" font-family="Georgia">he picks external signals</text><text x="340" y="166" text-anchor="middle" fill="#6b6257" font-family="Georgia">and names the close</text></g>
+      <g><circle cx="480" cy="120" r="9" fill="#000"/><text x="480" y="80" text-anchor="middle" font-weight="700">Jul 22 – 29</text><text x="480" y="97" text-anchor="middle">Sessions 4–5</text><text x="480" y="150" text-anchor="middle" fill="#6b6257" font-family="Georgia">Strategic Coach skill,</text><text x="480" y="166" text-anchor="middle" fill="#6b6257" font-family="Georgia">then scheduled it</text></g>
+      <g><circle cx="620" cy="120" r="9" fill="#000"/><text x="620" y="80" text-anchor="middle" font-weight="700">Aug 17</text><text x="620" y="97" text-anchor="middle">Wrap w/ Stefan + Amy</text><text x="620" y="150" text-anchor="middle" fill="#6b6257" font-family="Georgia">3.0 → 5.0 · ~40 hrs/wk</text><text x="620" y="166" text-anchor="middle" fill="#6b6257" font-family="Georgia">governance deferred to after today</text></g>
+      <g><circle cx="760" cy="120" r="9" fill="#000"/><text x="760" y="80" text-anchor="middle" font-weight="700">Sep 9</text><text x="760" y="97" text-anchor="middle">Weekly Report handoff</text><text x="760" y="150" text-anchor="middle" fill="#6b6257" font-family="Georgia">separate $8K build; fired</text><text x="760" y="166" text-anchor="middle" fill="#6b6257" font-family="Georgia">in the cloud, laptop shut</text></g>
+      <g><circle cx="900" cy="120" r="12" fill="#c5aa88"/><text x="900" y="80" text-anchor="middle" font-weight="700">Sep 16</text><text x="900" y="97" text-anchor="middle">Build Lab</text><text x="900" y="150" text-anchor="middle" fill="#6b6257" font-family="Georgia">the last live moment</text><text x="900" y="166" text-anchor="middle" fill="#6b6257" font-family="Georgia">with this cohort</text></g>
+      <text x="20" y="225" font-family="Georgia" font-size="13" fill="#cc0000">Seven weeks since anyone in this room built with you. Amy said it plainly: "if you haven't built an agent since the session, you probably don't remember how." Setup is a full block for that reason.</text>
+    </g>
+  </svg>
+  </div>
+  <div class="figcap"><b>Fig. A</b> · The engagement</div>
+  <div class="three">
+    <div class="box"><h4>What they already know</h4><p>A skill file is an SOP in a file. A skill file plus a when is an agent. The five-part card: job, trigger, sources, deliverable, guardrails. "Stop hunting, let it bubble up." They can say all of this back. Today's build is one more rep on a movement they've done, with the sources outside the building.</p></div>
+    <div class="box"><h4>What broke last time</h4><p>Finding menu items. Pasting a long prompt from Zoom chat. Losing the working folder. Cowork remembering the wrong model. Skills invoked as plain text. Every one of those has a written fix in the field guide.</p></div>
+    <div class="box"><h4>What's been retired</h4><p>Record a Skill: Mac only, not on Enterprise. One sentence at the open, no apology. Live skill authoring: gone; the skill is pasted, not written. The chatbot→agent explainer from your PDF replaces the S4 orchestration slide that fell flat.</p></div>
+  </div>
+</div></section>
+
+<!-- ASK -->
+<section class="s" id="ask"><div class="wrap">
+  <div class="kick">What Stefan asked for · Jul 21</div>
+  <h2>A job, not a dashboard.</h2>
+  <div class="two">
+    <div>
+      <div class="say"><p>"I love the external market signals because <b>we get very myopic here</b>. I probably spend an hour reading different news every day. Mining news, metal news. I have Bloomberg on the conference-room TV constantly. Tariffs, wars, things that impact trade. US, Europe, Asia. All of the markets are customers for us."</p></div>
+      <div class="say"><p>"Copper, that's a big mover. Gold is another. Nevada Gold Mines. Freeport. <b>It's really the trend for these.</b> Last year the world's largest copper mine had a cave-in. Cut off 20% immediately. Prices soar. Everywhere else invests in capacity, including Arizona, where we have a team."</p></div>
+      <div class="say"><p>"We have about 40 to 50 strategic accounts. Nucor, Martin Marietta, Vulcan Materials, Newmont, Barrick, Freeport. A web scrape on news from all of them: <b>where they're investing or not investing</b>. Todd's might be different than Stefan Harbig in Europe, different than Sri's in India. Same core, regional slots."</p></div>
+      <div class="say"><p>"I build a market outlook for our board. What's happened, where the trends are, how our business should be looked at in that filter for the next quarter."</p></div>
+      <p class="small">The 40 to 50 account list never arrived. The seven names above are the starter list in the skill; they customize tonight. Public sources only was his constraint, and the brief honors it.</p>
+    </div>
+    <div>
+      <div class="box r"><div class="kick" style="color:var(--red)">The landing · never cut</div>
+        <p><b>Stefan:</b> "Everybody's getting good at deep research and coming up with conclusions, and then, here, look at my output. You're giving away the responsibility. <b>Your finish line is not the report or the AI. The finish line is you consuming that information and deploying it.</b> You use this tool to go ninety miles an hour, and then you're going to walk again."</p>
+        <p><b>You:</b> "You can't send somebody an eighteen-page report. Synthesize it to: here's the decision I want to make. Push back or execute."</p>
+        <p><b>Stefan:</b> "That's precisely where I'd like to end."</p>
+      </div>
+      <div class="box g" style="margin-top:14px"><div class="kick">Why this changes the build</div><p>He bought a job: bring the outside in, tell me the trend, tell me where my accounts are moving, end on a call. A brief with a recommendation on top pays that more literally than a chart grid. The dashboard is the flourish, not the deliverable. It also quietly pays the SOW line about "a working dashboard from live Con Forms data," which the July pivot had left unpaid.</p></div>
+    </div>
+  </div>
+</div></section>
+
+<!-- ROOM -->
+<section class="s" id="room"><div class="wrap">
+  <div class="kick">The room</div>
+  <h2>Eleven people. Two you design for.</h2>
+  <p><b>Design-for: Todd.</b> If the scaffolding gets Todd to a working brief without calling James, it's good enough. <b>Floor-check: David T.</b> Under an hour a week, missed S4, lowest score. The format move at 2:49 is his door back in. Bob was the June floor and is now one of your strongest.</p>
+  <table>
+    <tr><th>Who</th><th>Where they are</th><th>Tomorrow</th></tr>
+    <tr><td><span class="tag g">Stretch</span>Stefan Brosick · CEO</td><td>Runs his weekly HIG report as a scheduled agent. Watched the ELT Weekly Report fire in the cloud on Sep 9. Warm, "a long runway ahead of us." Thinks 80/20.</td><td>Opens if he will (Sep 9 story). Backs the no-James line. Gets the board-outlook sentence at 2:49. Governance handed to him at 3:12.</td></tr>
+    <tr><td><span class="tag g">Stretch</span>Dave Stahlman · VP/GM Con Forms</td><td>The ceiling. Built a brand-standards skill for the org. Owns a signed $23K fall program. In Germany the week of Aug 31, back now.</td><td>Chat helper. Starts the round at 3:27.</td></tr>
+    <tr><td><span class="tag g">Stretch</span>Bob Wagner · Global IT</td><td>Biggest arc in the cohort. Shipped M365 write, email send live in S5. Ran the Weekly Report plumbing with James.</td><td>Connector help. Your settings answers come from him. Thank him by name at close.</td></tr>
+    <tr><td><span class="tag g">Stretch</span>Mike Symasek · CFO</td><td>Skeptic turned proof: "got off three or four things I'd had for a year." One sting: HIG could tell his MBR was Claude.</td><td>First volunteer to read aloud at 2:49. First voice at the landing. The voice move is his; don't name him. <b>Anonymous-only externally.</b></td></tr>
+    <tr><td><span class="tag g">Stretch</span>Zachary Fried · FP&A</td><td>Quiet, never stuck, built cleanly with zero help. Never given a stretch role.</td><td>Chat helper, named out loud at 2:10. Cheapest upgrade in the room.</td></tr>
+    <tr><td><span class="tag y">Guided</span>Vicki Vassallo · Marketing</td><td>Struggles through and recovers. Listens to Claude output on her phone "like a book on tape." Stefan told her last week to "just build an agent."</td><td>Watch for the skill-invoked-as-text error. <b>Anonymous-only externally.</b></td></tr>
+    <tr><td><span class="tag y">Guided</span>Amy Wangerin · HR, program lead</td><td>Told you on Aug 17 she wasn't sure what the Build Lab was. Her own HR lab is Sep 28. Carries the Teams channel.</td><td>Homework nudges are hers; say so at close. <b>Anonymous-only externally.</b></td></tr>
+    <tr><td><span class="tag y">Guided</span>Anthony Stanley · CCO</td><td>Prep 3 hrs → 10 min, self-rates "25% of this team." Wants a living folder. His Weekly Report file kept failing (old skill copy).</td><td>The Signal Desk folder is his living folder. Check his skill isn't a stale duplicate (Customize → Skills → Personal).</td></tr>
+    <tr><td><span class="tag o">Floor</span>Vance Moody · Product</td><td>"Undergrad in a PhD class." By S5: "it's just rocket." Loses teaching when typing.</td><td>The reason for hands-off-keyboards. Polishing counts as done; tell him.</td></tr>
+    <tr><td><span class="tag o">Floor</span>Todd Plate · President, Tricon</td><td>Most friction per minute. Lost folder, couldn't paste, "I've got to spend more time with James." Declined the mini-sprint: "we've got James."</td><td><b>Design-for.</b> Every click written. James is the third call. Stefan says it, not you, if he's there.</td></tr>
+    <tr><td><span class="tag o">Floor</span>David Terakedis · COO, Tricon</td><td>Missed S4, under 1 hr/wk, scored 8. Sharp when engaged. Named blocker: "the way Claude formats it versus the way my eyes read."</td><td><b>Floor-check.</b> The format move at 2:49 is for him. Look at him when it lands. Don't name him.</td></tr>
+  </table>
+  <p class="small" style="margin-top:12px">Domain trap: leadership is @cficompany.com, IT is @conforms.com, James is @triconwearsolutions.com. Recordings-only, not attending: Stefan Harbig (Europe), Sri (India).</p>
+</div></section>
+
+<!-- TONIGHT -->
+<section class="s" id="tonight"><div class="wrap">
+  <div class="kick">Tonight · before you sleep</div>
+  <h2>Dogfood the guide. Then send three emails.</h2>
+  <div class="two">
+    <div>
+      <h3>Build, on your own account</h3>
+      <div class="check"><input type="checkbox" id="t1"><label for="t1">Open the <a href="index.html">field guide</a>, do sections 03 and 04 exactly as written, as a participant. Fill the six blanks with your own name. Anything that snags, fix in the guide.</label></div>
+      <div class="check"><input type="checkbox" id="t2"><label for="t2">Run the brief. Read THE CALL. Fix one thing. Run again. Keep this one; it's your 2:06 demo.</label></div>
+      <div class="check"><input type="checkbox" id="t3"><label for="t3">Schedule yours for <b>Wed 2:58 PM CT</b> (one-off or weekly, doesn't matter). That's the "it did that while we were talking" beat.</label></div>
+      <div class="check"><input type="checkbox" id="t4"><label for="t4">Put <code>cfi-orders-weekly-v1.csv</code> in a SharePoint folder called <b>Build Lab</b> (from the downloads folder). Build the dashboard with the prompt in <code>dashboard-recipe.md</code>. Share it "Everyone in your organization" if the toggle exists; otherwise plan to screen-share.</label></div>
+      <div class="check"><input type="checkbox" id="t5"><label for="t5">Rename <code>cfi-orders-weekly-v2.csv</code> to the v1 filename and leave it on your desktop. That's the file you drop at 3:08.</label></div>
+      <div class="check"><input type="checkbox" id="t6"><label for="t6">Screenshot the Monday ELT report (or any report they know) for the format move at 2:49.</label></div>
+      <div class="check"><input type="checkbox" id="t7"><label for="t7">Open the field guide on a Windows machine or narrow window once. Every copy button works? Press F, cues show?</label></div>
+    </div>
+    <div>
+      <h3>Send</h3>
+      <div class="check"><input type="checkbox" id="t8"><label for="t8"><b>Bob + James settings email.</b> Drafted in Gmail. Send tonight. Ask for a reply by 11am CT.</label></div>
+      <div class="check"><input type="checkbox" id="t9"><label for="t9"><b>Cohort prep note.</b> Drafted in Gmail; add the eleven addresses. One ask, under 150 words, link to the guide. Send tonight so it's on top of their inbox in the morning.</label></div>
+      <div class="check"><input type="checkbox" id="t10"><label for="t10"><b>Stefan + Amy note.</b> Drafted. The agenda you promised Aug 17, plus the optional ask for Stefan to open. Add Amy's address.</label></div>
+      <div class="check"><input type="checkbox" id="t11"><label for="t11">Pin the field guide link in the ELT Teams channel, or ask Amy to.</label></div>
+      <h3 style="margin-top:22px">Morning, by 11am CT</h3>
+      <div class="check"><input type="checkbox" id="t12"><label for="t12">Bob's answers in. If web search is off: you run the brief on screen; they do watchlist + schedule. If cloud is off: nothing changes, the honest frame is already in the guide. If artifacts sharing is off: screen-share the file drop.</label></div>
+      <div class="check"><input type="checkbox" id="t13"><label for="t13">Check the Enterprise credit balance is comfortable (Organization settings → Usage, or ask Bob).</label></div>
+      <div class="check"><input type="checkbox" id="t14"><label for="t14">Zoom open, field guide on screen one, this page on screen two, F pressed.</label></div>
+    </div>
+  </div>
+</div></section>
+
+<!-- RUN OF SHOW -->
+<section class="s" id="ros"><div class="wrap">
+  <div class="kick">Run of show · 1:40 of content, 20 of buffer</div>
+  <h2>Two o'clock to four, by the clock.</h2>
+  <p><b>Hard checkpoint: paste by 2:31, wherever you are.</b> Yellow rows are protected, never cut. Grey rows shrink first if you're long. Full cues are in the field guide under F.</p>
+  <table>
+    <tr><th>Clock</th><th>Block</th><th>Min</th><th>What happens</th><th>Feeling</th></tr>
+    <tr><td>2:00</td><td>Open</td><td>6</td><td>Stefan's Sep 9 story (or you tell it). The climb as a floor. Identity line. Retire Record a Skill. Optional: the week's news, three sentences, only if the room is carrying it.</td><td>Pride</td></tr>
+    <tr class="c"><td>2:06</td><td>The one demo</td><td>4</td><td>Your Signal Brief from this morning. THE CALL aloud, one signal, "it arrived at 6:40." <i>Cut to 2.</i></td><td>Desire</td></tr>
+    <tr><td>2:10</td><td>The map, two lanes</td><td>4</td><td>Fig. 1 and Fig. 2. Lanes named once. Zach and Dave deputized. "James is the third call." 70/80 expectation set.</td><td>Orientation</td></tr>
+    <tr><td>2:14</td><td>Setup</td><td>7</td><td>Seven steps, checkboxes, thumbs on camera. Model first. Web search toggle eyeballed.</td><td>Re-entry</td></tr>
+    <tr><td>2:21</td><td>Build 1 · Watchlist</td><td>10</td><td>Six blanks: name, role, business, region, the decision, the line. The card in the guide helps them think.</td><td>Ownership</td></tr>
+    <tr class="p"><td>2:31</td><td>Build 2 · Paste</td><td>6</td><td>Copy button, paste, send. Claude writes SKILL.md. Customize → Skills shows Signal Brief.</td><td>Agency</td></tr>
+    <tr class="p"><td>2:37</td><td>Build 3 · Run it</td><td>12</td><td>"Run my Signal Brief." Two waves (Con Forms + CFI, then Tricon). While it runs: the quiet answer, never-fill-the-gap. Approve everything now.</td><td>Anticipation</td></tr>
+    <tr class="c"><td>2:49</td><td>Read one aloud</td><td>6</td><td>Mike or Dave S. "Would you sign that?" One fix live. Format move demo (David T). Board-outlook sentence to Stefan. <i>Cut to 4.</i></td><td>Pride</td></tr>
+    <tr class="p"><td>2:55</td><td>Build 4 · Schedule</td><td>6</td><td>One sentence, Mondays 6:40 CT. Honest frame on cloud. Your task fires ~2:58: "That's mine."</td><td>Wow, small</td></tr>
+    <tr><td>3:01</td><td>Build 5 · Show me</td><td>5</td><td>Scheduled panel, next-run time, hands on camera. Stretch box for the fast ones.</td><td>Done</td></tr>
+    <tr class="p"><td>3:06</td><td>The file drop</td><td>6</td><td>Open the dashboard, say the number. Drop v2. Reopen. Two seconds of silence. <i>Hidden upgrade: guided mini-build if the room is flying and buffer is intact.</i></td><td><b>Wow</b></td></tr>
+    <tr class="c"><td>3:12</td><td>The governance question</td><td>5</td><td>Eleven agents on the open web, unattended. Who owns one when it's wrong? Handed to Stefan and Amy. Not solved. <i>Cut to 3.</i></td><td>Sobriety</td></tr>
+    <tr class="p"><td>3:17</td><td>The landing</td><td>10</td><td>Stefan's quote, your line. Three minutes of silence to write the call. Two voices. "Would you say that Monday?"</td><td><b>Meaning</b></td></tr>
+    <tr class="p"><td>3:27</td><td>The round</td><td>9</td><td>Dave S first. 45 seconds each. Captured verbatim on screen. Rung named, not numbered. Cut to 30s if long; never cut the round.</td><td>Commitment</td></tr>
+    <tr class="p"><td>3:36</td><td>Close</td><td>4</td><td>Inventory. Homework, three lines. Callback. The four-line close, slowly. Thank-yous by name.</td><td>Peak-end</td></tr>
+    <tr><td>3:40</td><td>Buffer / Q&A</td><td>20</td><td>Seven weeks of questions land here, not mid-build. Stay on for stragglers.</td><td>Open</td></tr>
+  </table>
+  <p class="small" style="margin-top:12px">Cut order if long: demo to 2 → read-aloud to 4 → governance to 3 → round to 30s a voice → buffer. Never: schedule, file drop, landing, round, close.</p>
+</div></section>
+
+<!-- MOMENTS -->
+<section class="s" id="moments"><div class="wrap">
+  <div class="kick">The two engineered moments</div>
+  <h2>Design them. Don't hope for them.</h2>
+  <div class="two">
+    <div class="box k"><div class="kick">WOW · 3:06 · the file drop</div><p style="color:#fff">Share the link. "Open it. Someone say the top number." Close. Drop v2 into SharePoint. Count to five. "Open it again." Two seconds of nothing. Then: "Nobody refreshed anything. Nobody asked anyone for a report. A file landed in a folder." That sentence is the whole engagement's thesis in fourteen words.</p><p style="color:#c5aa88">If the link won't open for someone, screen-share. Don't debug. The moment survives.</p></div>
+    <div class="box"><div class="kick">TRANSFORMATION · 3:17 to 3:36 · the landing and the round</div><p>Stefan's own words, then three minutes of silence while they write a decision, then two people read theirs and you ask "would you say that Monday?" Then the round: what's next in your world. It's social, in front of peers and the CEO, and it's where "another AI thing" becomes "how we work now." Protect the silence. It's the hardest three minutes of the day to leave alone.</p></div>
+  </div>
+</div></section>
+
+<!-- SEEDS -->
+<section class="s" id="seeds"><div class="wrap">
+  <div class="kick">Seeds · internal only</div>
+  <h2>Name the opportunity. Never claim it.</h2>
+  <p>Three commercial threads are waiting on how tomorrow goes: governance V2 ($5K, Stefan deferred it to "right after the Build Lab"), the quarterly ELT session (Amy folded it into her 2027 planning, which comes after), and function mini-camps (Stefan: "yep, definitely," unscoped). Also latent: his "we need a thought leader to orchestrate this" line from Aug 17. Nothing tomorrow is a pitch. Each of these is just good facilitation, which is why it works.</p>
+  <table>
+    <tr><th>Seed</th><th>The move</th><th>The rule</th></tr>
+    <tr><td>The function round</td><td>Capture every "what's next" verbatim on screen. It's the mini-camp demand list, generated by them, in front of Stefan.</td><td>Say nothing about who builds them. Not one word. The recap lists them back.</td></tr>
+    <tr><td>Governance</td><td>Raise it as a question at 3:12, hand it to Stefan and Amy, let it sit. The one-pager has been in their inbox since Aug 17.</td><td>Don't answer it. Don't offer. If it goes quiet: "Park it. It's the right next conversation."</td></tr>
+    <tr><td>The board outlook</td><td>One sentence to Stefan at 2:49: "This is the front end of the market outlook you build by hand for the board."</td><td>Then move on. Do not develop it.</td></tr>
+    <tr><td>The orchestrator</td><td>Leave it alone. If Stefan raises "where's the brain of the organization," follow for one exchange.</td><td>Don't reach.</td></tr>
+  </table>
+  <p class="small" style="margin-top:12px">After: the recap tomorrow closes with the function list, the homework, and one sentence acknowledging the governance question is theirs. Then the governance thread gets its own note the following week.</p>
+</div></section>
+
+<!-- TECH -->
+<section class="s" id="tech"><div class="wrap">
+  <div class="kick">Tech state · as of Sep 15</div>
+  <h2>What's on, what's unknown, what changed.</h2>
+  <div class="three">
+    <div class="box"><h4>Confirmed</h4><p><span class="tag g">on</span>M365 connector for all 11</p><p><span class="tag g">on</span>Credits topped up (self-serve Enterprise, prepaid, org-wide stop at zero)</p><p><span class="tag g">on</span>Cloud scheduled routines work in their tenant (Weekly Report proof, Sep 3)</p></div>
+    <div class="box r"><h4>Unconfirmed · Bob's email</h4><p><span class="tag r">?</span><b>Web search.</b> The one the session can't run without.</p><p><span class="tag y">?</span><b>Run Cowork in the cloud</b> for the ELT group (two-step). Fallback: honest frame, already in the guide.</p><p><span class="tag y">?</span><b>Artifacts + org sharing.</b> Fallback: screen-share.</p><p><span class="tag y">?</span><b>Built-in browser.</b> Flipped on by default Sep 10. Not needed tomorrow.</p></div>
+    <div class="box g"><h4>Changed since August</h4><p>"Live artifacts" replaced by the new artifacts system Aug 19: versioned, connector-aware, shareable "Everyone in your organization."</p><p>Permission modes renamed: Manually approve / Automatically approve / Skip all approvals.</p><p>Fable 5.1 shipped Sep 1; Fable is locked off for CFI. Sonnet for the build.</p><p>Windows KB5124008 (Sep 8) broke local Cowork file access; KB5129195 (Sep 14) fixes it. In the prep note.</p><p>Record a Skill: still Mac-only, still not Enterprise.</p></div>
+  </div>
+  <h3 style="margin-top:26px">What the Weekly Report build taught us about M365</h3>
+  <table>
+    <tr><th>It broke when</th><th>So tomorrow</th></tr>
+    <tr><td>Excel written through the connector</td><td>4 of 11 workbooks corrupt. CSV and markdown only. HTML if it needs to look like a report. Baked into the dashboard recipe.</td></tr>
+    <tr><td>A folder got moved or renamed</td><td>Skills point at paths. "Name it once, write it down, never move it." Said in setup step 2 and in the dashboard section.</td></tr>
+    <tr><td>Connector silently disconnected</td><td>Setup step 7 is a connector check. Stuck table has the reconnect path.</td></tr>
+    <tr><td>Hand-installed skill beat the org-published one</td><td>Anthony's file failed every week with no run log. Stuck table: Customize → Skills → Personal wins; remove the duplicate.</td></tr>
+    <tr><td>Scheduled 8:01, fired 8:28 under Monday load</td><td>The guide schedules 6:40, not 7:00, and says why.</td></tr>
+    <tr><td>Email attachments</td><td>Draft with a link, never an attachment. Not in tomorrow's build; in the recipe's stuck table.</td></tr>
+    <tr><td>Fable burned tokens on voice interviews</td><td>Fable off. Sonnet for talking, Opus for the heavy Monday job, stated in the stretch notes.</td></tr>
+  </table>
+</div></section>
+
+<!-- RISKS -->
+<section class="s" id="risks"><div class="wrap">
+  <div class="kick">Risk → contingency</div>
+  <h2>What breaks, and what you do instead.</h2>
+  <table>
+    <tr><th>If</th><th>Then</th></tr>
+    <tr><td>Web search is off for the org</td><td>You run the brief on screen. They do watchlist (2:21), paste (2:31), and schedule (2:55). The skill is saved in their account and reads the day Bob flips it. Say nothing about the setting to the room.</td></tr>
+    <tr><td>A source returns empty and Claude fills the gap</td><td>The skill has the never-fill line. If it happens anyway, it's the best teaching moment of the day: "Which source did it name? None? That's the line it broke. Tell it."</td></tr>
+    <tr><td>Cloud is off; schedule runs locally</td><td>Honest frame, already in the guide box. Keep moving.</td></tr>
+    <tr><td>Shared artifact won't open</td><td>Screen-share the file drop. Same moment.</td></tr>
+    <tr><td>Someone's Cowork won't start</td><td>"Watch this round. Ten minutes tomorrow with the page." Pair with a neighbor. Never debug one machine in front of ten people.</td></tr>
+    <tr><td>Credits wall mid-session</td><td>Two waves on run. If it hits: "Bob, can you top up?" Everyone else reads the guide's stretch box while it lands. It's a 5-minute fix on a card.</td></tr>
+    <tr><td>Room drifts into the AI news</td><td>Three sentences, no debate, "the lines don't move," back to building. Pick it up at 3:12 where it belongs.</td></tr>
+    <tr><td>Stefan doesn't come, or comes late</td><td>You tell the Sep 9 story and credit him. You say the James line yourself. Governance gets handed to Amy with "and Stefan." Nothing else changes.</td></tr>
+    <tr><td>Running long at 3:06</td><td>Skip the hidden upgrade. Governance to 3 minutes. Round to 30 seconds a voice. Buffer absorbs the rest. Landing and close stay whole.</td></tr>
+    <tr><td>Todd says "I'll get James to do it"</td><td>"After you've tried it and asked your neighbor. That's the deal." If Stefan is there, look at him; he'll take it.</td></tr>
+  </table>
+</div></section>
+
+<!-- AFTER -->
+<section class="s" id="after"><div class="wrap">
+  <div class="kick">After</div>
+  <h2>Thursday's recap, and the week after.</h2>
+  <div class="two">
+    <div>
+      <h3>Recap skeleton · 500 to 650 words · Thursday</h3>
+      <p><b>What exists now.</b> Eleven Signal Briefs, scheduled. First one landed Monday (or lands next Monday).</p>
+      <p><b>The calls.</b> Two or three of the decisions read aloud, unattributed for the anonymous-only three, attributed with permission for the rest.</p>
+      <p><b>What's next in your world.</b> The function list, verbatim, every name. This is the section that does the commercial work. It is just a list.</p>
+      <p><b>Homework.</b> The three lines from the close, with the guide link. Amy nudges in Teams.</p>
+      <p><b>One line on scope.</b> "The July decision to point this at external, public signals was Stefan's, and it's the right one; the dashboard recipe covers the internal-data version the SOW described." That papers the variance.</p>
+      <p><b>One sentence on governance.</b> "The question of who owns an agent when it's wrong is yours; the V2 note from August is the starting point whenever you want it." Nothing more.</p>
+    </div>
+    <div>
+      <h3>The week after</h3>
+      <p><b>Governance V2, $5K.</b> Stefan explicitly deferred this to after the Build Lab. One short note the following Monday, referencing the 3:12 question and the August one-pager. Let Amy carry it if she's already moving.</p>
+      <p><b>Amy's HR Build Lab, Mon Sep 28, 2 to 4 CT.</b> Charter alignment call before Sep 23 is not yet booked. Her role-redesign skill file is still owed.</p>
+      <p><b>Bob's "other projects" conversation.</b> You offered Thu Sep 24, 10:30 CT. No reply yet.</p>
+      <p><b>Dave's fall program.</b> Remaining two labs and the ECN sprint still need dates; $10K invoice went Sep 14.</p>
+      <p><b>Proof.</b> Stefan, Dave S, Bob, Vance are cleared for named quotes. Amy, Mike, Vicki are anonymous-only. Check before anything external.</p>
+    </div>
+  </div>
+</div></section>
+
+<!-- LANGUAGE -->
+<section class="s" id="lang"><div class="wrap">
+  <div class="kick">Language that lands with this room</div>
+  <h2>Already installed. Reuse it.</h2>
+  <div class="three">
+    <div class="box"><p>"Stop hunting. Let it bubble up."</p><p>"A skill file plus a when equals an agent."</p><p>"A skill file is an SOP in a file."</p><p>"Job, trigger, sources, deliverable, guardrails."</p></div>
+    <div class="box"><p>"Go to AI first." (Amy's)</p><p>"Treat it like headcount expense."</p><p>"AI raises the floor for everybody. The only place left to compete is the ceiling."</p><p>"Call James after you've tried it and failed, not before."</p></div>
+    <div class="box"><p>Stefan's: "We have about a six-month head start, but everyone will catch up."</p><p>Stefan's: "We're not going to be creating MBRs anymore. We're going to be approving, validating, changing."</p><p>Stefan's: "The finish line is you consuming that information and deploying it."</p></div>
+  </div>
+  <div class="box k" style="margin-top:18px"><div class="kick">The close, verbatim, slowly</div><p style="color:#fff;font-size:19px;line-height:1.45">All of it runs without you now.<br>None of it decides anything.<br>That part is still yours.<br>And that's the point.</p></div>
+</div></section>
+
+<div class="foot"><span>DK · Consulting · Facilitator guide · CFI Build Lab · Sep 16, 2026</span><span>Field guide: index.html · press F there for cues</span></div>
+<script>
+(function(){var secs=[].slice.call(document.querySelectorAll('section.s')),links=[].slice.call(document.querySelectorAll('.nav a'));function on(){var y=window.scrollY+140,c=null;secs.forEach(function(s){if(s.offsetTop<=y)c=s.id});links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+c)})}window.addEventListener('scroll',on);on();
+for(var i=1;i<=14;i++)(function(id){var el=document.getElementById(id);if(!el)return;try{el.checked=localStorage.getItem('fac-'+id)==='1'}catch(e){}el.addEventListener('change',function(){try{localStorage.setItem('fac-'+id,el.checked?'1':'0')}catch(e){}})})('t'+i);})();
+</script>
+</body>
+</html>
